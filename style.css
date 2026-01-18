@@ -73,13 +73,13 @@ nav {
     background-image: url('./assets/hero-bg.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     text-align: center;
     position: relative;
-    padding: 6rem 0 7rem 0;
-    display: flex;
+    padding: 7rem 0 5rem 0;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 .banner__image {
     margin: auto;
@@ -87,12 +87,12 @@ nav {
 }
 
 .banner__image #circle {
-    max-width: 60%;
+    width: minmax(150px,25%);
     vertical-align: middle;
 }
 
 .banner__image #microphone {
-    width: 20%;
+    width: minmax(150px,9%);
     position: absolute;
     top: 50%;
     left: 50%;
