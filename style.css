@@ -51,7 +51,7 @@ nav {
 
 .nav__section {
     max-width: 1200px;
-    padding: 1.7rem 0;
+    padding: 1.7rem 1rem;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -280,10 +280,12 @@ nav {
 /* choose-section */
 .choose-section {
     background-color: #230E3D;
+    padding: 0 1rem;
 }
 
 .choose-info {
     max-width: 1200px;
+    
     margin: auto;
     padding: 5rem 0;
 }
@@ -361,7 +363,7 @@ nav {
 
 /* feature-section */
 .feature-section {
-    padding: 4rem 0 6rem;
+    padding: 4rem 1rem 6rem;
 }
 
 .feature-section h1 {
@@ -663,4 +665,15 @@ footer .footer-head {
     }
 
 
+}
+
+/* large device */
+@media screen and (min-width: 992px) {
+    /* .nav__section {
+    max-width: 1200px;
+    padding: 1.7rem 0;
+    margin: 0 7%;
+
+
+} */
 }
