@@ -12,7 +12,7 @@
 }
 
 p {
-    color: #ffffffad;
+    color: #ffffffc0;
 }
 
 
@@ -29,12 +29,14 @@ header {
     border: none;
     border-radius: 2em;
     cursor: pointer;
+    transition: transform 0.4s;
 
 }
 
 .btn img {
     width: 0.8em;
     vertical-align: middle;
+
 }
 
 .btn:hover,
@@ -97,7 +99,7 @@ nav {
 
 .banner__image .circle {
     width: 100%;
-    animation: myAnimation 4s linear infinite;
+    animation: myAnimation 3s linear infinite;
 }
 
 @keyframes myAnimation {
@@ -194,6 +196,7 @@ nav {
     border-radius: 2em;
     cursor: pointer;
     margin: 0 5px;
+    transition: transform 0.4s;
 
 }
 
@@ -217,7 +220,7 @@ nav {
     z-index: 99;
     top: 0;
     left: 50%;
-    animation: bageAnimation 2s ease-in-out 0.1s 1 alternate forwards;
+    animation: bageAnimation 1s ease-in-out 0.1s 1 alternate forwards;
 }
 
 @keyframes bageAnimation {
@@ -358,7 +361,7 @@ nav {
 
 /* feature-section */
 .feature-section {
-    padding: 5rem 0;
+    padding: 4rem 0 6rem;
 }
 
 .feature-section h1 {
@@ -366,7 +369,7 @@ nav {
     font-size: 2.7rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 2.3rem;
+    margin-bottom: 1.5rem;
 
 }
 
@@ -375,7 +378,7 @@ nav {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 40px;
 }
 
 .feature-frame iframe {
@@ -419,6 +422,84 @@ h3 {
 .frame .time {
     color: #00FF88;
     font-weight: 500;
+}
+
+
+/* host-section */
+.host-section h1 {
+    margin-top: 5rem;
+}
+
+.host-detail {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #35116550;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.host-detail .host-des {
+    margin-left: 2.5rem;
+}
+
+.host-des h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.host-des p {
+    line-height: 1.4rem;
+    margin-bottom: 1.3rem;
+
+}
+
+.host-section .social img {
+    border: none;
+    box-sizing: content-box;
+    border: 2px solid #533c72;
+    padding: 5px;
+    max-width: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+
+footer {
+    background-image: url('./assets/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+footer .footer-head {
+    max-width: 350px;
+    width: 100%;
+}
+
+.footer-logo {
+    max-width: 540px;
+    margin: 1.5rem auto;
+    color: #ffffffcc;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-logo img {
+    vertical-align: middle;
+    max-width: 1rem;
 }
 
 
@@ -534,11 +615,51 @@ h3 {
 
     .feature-frame {
         grid-template-columns: repeat(1, 1fr);
-        gap: 30px;
     }
 
     .feature-frame .frame {
         margin: 0 7%;
+    }
+
+    .host-detail {
+        padding: 0.8rem;
+        text-align: center;
+        flex-direction: column;
+        margin: 0 7%;
+    }
+
+    .host-detail .host-des {
+        margin-left: 0rem;
+        margin-top: 1rem;
+    }
+
+    .host-section .social {
+        margin-bottom: 1rem;
+    }
+
+    .host-section h1 {
+        margin-top: 3.5rem;
+    }
+
+
+    footer {
+        padding: 2.5rem 0;
+    }
+
+    footer .footer-head {
+        max-width: 200px;
+    }
+
+    .footer-logo {
+        max-width: 300px;
+        margin: 1.5rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 10px;
     }
 
 
