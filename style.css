@@ -10,6 +10,7 @@
 .background-color {
     background-color: #17072b;
 }
+
 p {
     color: #ffffffad;
 }
@@ -96,7 +97,7 @@ nav {
 
 .banner__image .circle {
     width: 100%;
-    animation: myAnimation 5s ease-in infinite normal forwards;
+    animation: myAnimation 4s linear infinite;
 }
 
 @keyframes myAnimation {
@@ -246,22 +247,27 @@ nav {
     border-bottom: 1px solid #ffffff25;
 
 }
+
 .about-text h1 {
     font-size: 2.7rem;
     font-weight: bold;
     padding-bottom: 1.2rem;
 }
-.about-text p,.about-card p {
+
+.about-text p,
+.about-card p {
     font-weight: 400;
     line-height: 2rem;
 
 
 }
+
 .about-card {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 4rem 0;
 }
+
 .about-card h1 {
     color: #00FF88;
     font-weight: bolder;
@@ -272,11 +278,13 @@ nav {
 .choose-section {
     background-color: #230E3D;
 }
+
 .choose-info {
     max-width: 1200px;
     margin: auto;
     padding: 5rem 0;
 }
+
 .choose-info h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -285,43 +293,136 @@ nav {
     margin-bottom: 2rem;
 }
 
-.card1 {grid-area: card1;}
-.card2 {grid-area: card2;}
-.card3{grid-area: card3;}
-.card4{grid-area: card4;}
-.card5 {grid-area: card5;}
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
 
 .choose-card {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1.7rem;
     grid-template-areas: 'card1 card1 card2 card2 card2 card2'
-    'card1 card1 card3 card3 card3 card3'
-    'card4 card4 card4 card4 card5 card5';
+        'card1 card1 card3 card3 card3 card3'
+        'card4 card4 card4 card4 card5 card5';
 
 }
+
 .choose-card .card {
     background-color: #35116550;
     border-radius: 2.5rem;
     padding: 2.7rem;
+    transition: transform 0.5s, background-color 0.5s;
 }
+
+.choose-card .card:hover {
+    transform: scale(1.03);
+    background-color: #351165;
+}
+
 .choose-card h2 {
-    font-size:1.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 1.2rem 0;
     color: white;
 }
+
 .choose-card p {
     line-height: 1.5rem;
 }
+
 .choose-card .card1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .choose-card .card1 img {
     max-width: 50px;
 }
+
+/* feature-section */
+.feature-section {
+    padding: 5rem 0;
+}
+
+.feature-section h1 {
+    color: white;
+    font-size: 2.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2.3rem;
+
+}
+
+.feature-frame {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-frame iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.feature-frame .frame {
+    background-color: #35116550;
+    border-radius: 1rem;
+    transition: transform 0.3s, background-color 0.5s;
+}
+
+.feature-frame .frame:hover {
+    transform: scale(1.02);
+    background-color: #351165;
+}
+
+.frame h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.frame p,
+h3 {
+    margin: 1.5rem;
+}
+
+.frame p {
+    line-height: 1.5rem;
+}
+
+.frame img {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.frame .time {
+    color: #00FF88;
+    font-weight: 500;
+}
+
+
+
 /* responsive in small device */
 
 
@@ -377,46 +478,68 @@ nav {
         padding: 0.8rem 5%;
     }
 
-.about-info .about-text {
-    color: white;
-    padding: 3rem 7% 1.5rem;
-    border-bottom: 1px solid #ffffff25;
+    .about-info .about-text {
+        color: white;
+        padding: 3rem 7% 1.5rem;
+        border-bottom: 1px solid #ffffff25;
 
-}
-.about-text h1 {
-    font-size: 2rem;
-}
-.about-text p,.about-card p {
-    font-weight: 300;
-    line-height: 1.5rem;
+    }
 
-}
-.about-card {
-    grid-template-columns: repeat(2,1fr);
-    padding: 2.5rem 0;
-    row-gap: 2rem;
-}
+    .about-text h1 {
+        font-size: 2rem;
+    }
 
-.choose-info {
-    padding: 2.5rem 0;
-}
+    .about-text p,
+    .about-card p {
+        font-weight: 300;
+        line-height: 1.5rem;
 
-.choose-info h1 {
-    font-size: 1.7rem;
-    margin-bottom: 1.5rem;
-}
+    }
 
-.choose-card {
-    grid-template-columns: repeat(1,1fr);
-    gap: 1rem;
-    grid-template-areas: 'card1'
-    'card2'
-    'card3'
-    'card4'
-    'card5';
-    margin: 0 7%;
-}
+    .about-card {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem 0;
+        row-gap: 2rem;
+    }
 
+    .choose-info {
+        padding: 2.5rem 0;
+    }
+
+    .choose-info h1 {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .choose-card {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        grid-template-areas: 'card1'
+            'card2'
+            'card3'
+            'card4'
+            'card5';
+        margin: 0 7%;
+    }
+
+    .feature-section {
+        padding: 2rem 0;
+    }
+
+    .feature-section h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+
+    }
+
+    .feature-frame {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .feature-frame .frame {
+        margin: 0 7%;
+    }
 
 
 }
