@@ -8,7 +8,7 @@
 
 /* common css */
 .background-color {
-    background-color: #16072a;
+    background-color: #17072b;
 }
 
 
@@ -112,7 +112,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: animation 3s linear 0s 1 alternate forwards;
+    animation: animation 4s linear 0s 1 alternate forwards;
 }
 
 @keyframes animation {
@@ -231,6 +231,42 @@ nav {
 }
 
 
+/* About section */
+.about-info {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-info .about-text {
+    color: white;
+    padding: 3rem 15rem;
+    border-bottom: 1px solid #ffffff25;
+
+}
+.about-text h1 {
+    font-size: 2.7rem;
+    font-weight: bold;
+    padding-bottom: 1.2rem;
+}
+.about-text p,.about-card p {
+    font-weight: 400;
+    line-height: 2rem;
+    color: #ffffffbe;
+
+}
+.about-card {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 4rem 0;
+}
+.about-card h1 {
+    color: #00FF88;
+    font-weight: bolder;
+
+}
+
+
 
 
 /* responsive in small device */
@@ -288,5 +324,26 @@ nav {
         font-size: 0.9rem;
         padding: 0.8rem 5%;
     }
+
+.about-info .about-text {
+    color: white;
+    padding: 3rem 7% 1.5rem;
+    border-bottom: 1px solid #ffffff25;
+
+}
+.about-text h1 {
+    font-size: 2rem;
+}
+.about-text p,.about-card p {
+    font-weight: 300;
+    line-height: 1.5rem;
+
+}
+.about-card {
+    grid-template-columns: repeat(2,1fr);
+    padding: 2.5rem 0;
+    row-gap: 1.7rem;
+}
+
 
 }
