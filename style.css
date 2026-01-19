@@ -8,7 +8,7 @@
 
 /* common css */
 .background-color {
-    background-color: #1A0B2E;
+    background-color: #16072a;
 }
 
 
@@ -31,6 +31,11 @@ header {
 .btn img {
     width: 0.8em;
     vertical-align: middle;
+}
+
+.btn:hover,
+.sub-button:hover {
+    transform: scale(1.05);
 }
 
 /* nav section */
@@ -72,10 +77,10 @@ nav {
     background-image: url('./assets/hero-bg.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     text-align: center;
     position: relative;
-    padding: 6rem 0 5rem 0;
+    padding: 5rem 0 3rem 0;
 }
 
 .banner__image {
@@ -88,12 +93,17 @@ nav {
 
 .banner__image .circle {
     width: 100%;
-    animation: myAnimation 5s linear 0.5s infinite normal forwards;
+    animation: myAnimation 5s ease-in infinite normal forwards;
 }
 
 @keyframes myAnimation {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .banner__image .microphone {
@@ -102,20 +112,53 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: animation 3s linear 0.1s 1 alternate forwards;
+    animation: animation 3s linear 0s 1 alternate forwards;
 }
+
 @keyframes animation {
-    0% {opacity: 0;}
-    10% {opacity: 0.1;}
-    20% {opacity: 0.2;}
-    30% {opacity: 0.3;}
-    40% {opacity: 0.4;}
-    50% {opacity: 0.5;}
-    60% {opacity: 0.6;}
-    70% {opacity: 0.7;}
-    80% {opacity: 0.8;}
-    90% {opacity: 0.9;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .banner__text h1 {
@@ -168,17 +211,38 @@ nav {
     padding: 7px 0;
     box-shadow: 0 1px 30px #00FF88;
     position: absolute;
-    top: 6.8rem;
-    left: 55%;
     z-index: 99;
+    top: 0;
+    left: 50%;
+    animation: bageAnimation 2s ease-in-out 0.1s 1 alternate forwards;
+}
+
+@keyframes bageAnimation {
+    from {
+        top: 0rem;
+        left: 50%;
+        box-shadow: 0 0px 0px #00FF88;
+    }
+
+    to {
+        left: 55%;
+        top: 6.8rem;
+    }
 }
 
 
 
+
 /* responsive in small device */
+
+
 @media screen and (max-width: 576px) {
     .nav__section {
         margin: 0 7%;
+    }
+
+    .nav__section {
+        padding: 1rem 0;
     }
 
     .nav__logo img {
@@ -192,6 +256,37 @@ nav {
 
     #hamburger {
         display: block;
+    }
+
+    .banner__section {
+        padding: 2rem 0 0.5rem 0;
+        background-size: 100% 100%;
+
+    }
+
+
+    @keyframes bageAnimation {
+        from {
+            top: 0rem;
+            left: 50%;
+            box-shadow: 0 0px 0px #00FF88;
+        }
+
+        to {
+            left: 55%;
+            top: 2.5rem;
+        }
+    }
+
+    .banner__text h1 {
+        font-size: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 0;
+    }
+
+    .banner__text p {
+        font-size: 0.9rem;
+        padding: 0.8rem 5%;
     }
 
 }
