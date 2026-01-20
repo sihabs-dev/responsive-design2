@@ -220,7 +220,7 @@ nav {
     z-index: 99;
     top: 0;
     left: 50%;
-    animation: bageAnimation 1s ease-in-out 0.1s 1 alternate forwards;
+    animation: bageAnimation 4s ease-in-out 0.3s 1 alternate forwards;
 }
 
 @keyframes bageAnimation {
@@ -504,6 +504,8 @@ footer .footer-head {
     max-width: 1rem;
 }
 
+
+
 /* responsive in midium design */
 @media screen and (min-width: 576px) and (max-width: 991px) {
 
@@ -573,8 +575,6 @@ footer .footer-head {
         margin-left: 2rem;
     }
 }
-
-
 
 
 
