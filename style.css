@@ -220,7 +220,7 @@ nav {
     z-index: 99;
     top: 0;
     left: 50%;
-    animation: bageAnimation 4s ease-in-out 0.3s 1 alternate forwards;
+    animation: bageAnimation 2s ease-in-out 0.3s 1 alternate forwards;
 }
 
 @keyframes bageAnimation {
